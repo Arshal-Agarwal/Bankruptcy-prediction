@@ -1,14 +1,9 @@
 library(ROSE)
-library(e1071)        # For SVM
 library(class)        # For KNN
-library(caret)        # For confusion matrix and Naive Bayes
- # Already used for the original Random Forest model
+library(caret)        # For confusion matrix
 
 # Load the dataset
 data <- read.csv("test_data.csv")
-
-# Convert the target variable to a factor
-data$Bankrupt. <- as.factor(data$Bankrupt.)
 
 # Check the class distribution before oversampling
 print("Class distribution before oversampling:")

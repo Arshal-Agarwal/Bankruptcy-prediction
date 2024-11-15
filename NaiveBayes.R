@@ -1,7 +1,5 @@
 library(ROSE)
 library(caret)      # For confusion matrix and Naive Bayes
-library(e1071)
-
 
 # Load the dataset
 data <- read.csv("test_data.csv")
@@ -26,6 +24,7 @@ print(table(oversampled_data$Bankrupt.))
 
 # Ensure the target variable is a factor in the oversampled data
 oversampled_data$Bankrupt. <- as.factor(oversampled_data$Bankrupt.)
+
 
 # Split data into training and testing sets
 set.seed(42)

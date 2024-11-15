@@ -21,6 +21,7 @@ oversampled_data <- ovun.sample(Bankrupt. ~ ., data = data, method = "over", N =
 print("Class distribution after oversampling (1:1 ratio):")
 print(table(oversampled_data$Bankrupt.))
 
+
 # Prepare the features (excluding the target variable)
 X <- as.matrix(oversampled_data[, -which(names(oversampled_data) == "Bankrupt.")])
 y <- oversampled_data$Bankrupt.
